@@ -1,6 +1,9 @@
 package net.cpgyuri.hysteria;
 
 import com.mojang.logging.LogUtils;
+import net.cpgyuri.hysteria.item.ModCreativeModTabs;
+import net.cpgyuri.hysteria.item.ModItems;
+import net.cpgyuri.hysteria.sound.ModSounds;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,6 +30,12 @@ public class Hysteria
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
+        ModSounds.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -47,6 +56,7 @@ public class Hysteria
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

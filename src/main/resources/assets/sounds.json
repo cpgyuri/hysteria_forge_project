@@ -1,0 +1,11 @@
+{
+  "qqz_bfh_music_disc":{
+    "category": "record",
+    "sounds":[
+      {
+        "name": "hysteria:qqz_bfh_music_disc",
+        "stream": true
+      }
+    ]
+  }
+}
